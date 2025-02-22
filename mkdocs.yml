@@ -1,4 +1,75 @@
-site_name: 过程系统工程学习笔记
-site_url: https://www.ai4energy.cn/notes_on_pse
-theme:
-  name: material
+#基本配置
+site_name: 过程系统工程学习笔记                       # 网站名称
+site_url: https://www.ai4energy.cn/notes_on_pse     # 网站地址
+site_description: 过程系统工程学习笔记                # 网站描述
+site_author: AI4Energy                              # 网站作者
+repo_url: https://github.com/mingtaoli/Notes-on-PSE # 仓库地址
+repo_name: mingtaoli/Notes-on-PSE                   # 仓库名称
+copyright: Copyright © 2025 AI4Energy               # 版权
+
+# 验证配置
+validation: 
+  nav:                 # 导航验证规则
+    omitted_files: info
+    not_found: warn
+    absolute_links: info
+  links:               # 链接验证规则
+    not_found: warn
+    absolute_links: info
+    unrecognized_links: ignore
+
+# 主题配置
+theme: 
+ name: material             
+ logo: 'assets/图标2.png'     # 网站图标
+ favicon: 'assets/ai4energy-circle.svg'  # 网站标签页上的小图标
+ language: zh    # 语言配置
+ palette:        # 调色配置
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/brightness-7 
+        name: 切换到暗色模式
+
+    - scheme: slate
+      primary: grey
+      toggle:
+        icon: material/brightness-4
+        name: 切换到亮色模式
+ features:
+  - content.code.annotate  # 启用代码行号和高亮
+  - navigation.tabs      # 顶部导航
+  - navigation.footer    # 底部导航
+  - navigation.top       # 顶部返回顶部按钮
+  - search.highlight     # 搜索结果高亮
+
+# 导航配置
+nav: 
+  - 主页: index.md
+  - 前置学习内容: 
+    - 第一步: 01前置学习内容.md
+  - Ascend4分析: 
+    - Ascend4概述: Ascend4分析/Ascend4概述.md
+    - Ascend4历史: Ascend4分析/Ascend的历史.md
+    - Ascend4功能: Ascend4分析/Ascend4的功能.md
+    - Ascend4分析: Ascend4分析/Ascend4分析01.md
+
+# 插件配置
+markdown_extensions:
+  - codehilite                   # 代码高亮
+  - admonition                   # 警告框
+  - pymdownx.tabbed:             # 标签
+      alternate_style: true      # 使用交替样式
+  - pymdownx.details             # 详情（可折叠内容）
+  - pymdownx.superfences         # 超级围栏（增强代码块功能）
+  - pymdownx.mark                # 标记（高亮文本）
+  - pymdownx.critic              # 删除线
+  - pymdownx.caret               # 插入符号（上标）
+  - pymdownx.tilde               # 删除线（~~text~~）
+  - attr_list                    # 属性列表（为元素添加 HTML 属性）
+  - md_in_html                   # HTML 中的 Markdown
+  - tables                       # 表格
+  # - mdx_truly_sane_lists       # 更智能的列表解析
+
+
+
